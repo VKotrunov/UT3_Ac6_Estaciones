@@ -9,13 +9,10 @@
         Height="450"
         Width="800"
         Icon="sun.ico">
-
-    <UniformGrid Background="LightBlue"
-                 Rows="5"
-                 Columns="1">
+    <DockPanel Background="LightBlue">
         <TextBlock Text="Las 4 estaciones"
                    FontSize="30"
-                   HorizontalAlignment="Center">
+                   HorizontalAlignment="Center" DockPanel.Dock="Top">
             <TextBlock.Effect>
                 <DropShadowEffect />
             </TextBlock.Effect>
@@ -28,26 +25,27 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-
-        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+        <UniformGrid>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Auto"
                       Margin="10" >
-            <Image Source="invierno.jpg" />
-        </ScrollViewer>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                <Image Source="invierno.jpg" />
+            </ScrollViewer>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Auto"
                       Margin="10">
-            <Image Source="primavera.jpg" />
-        </ScrollViewer>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                <Image Source="primavera.jpg" />
+            </ScrollViewer>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Auto"
                       Margin="10">
-            <Image Source="verano.jpg" />
-        </ScrollViewer>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                <Image Source="verano.jpg" />
+            </ScrollViewer>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Auto"
                       Margin="10">
-            <Image Source="otoño.jpg" />
-        </ScrollViewer>
-    </UniformGrid>
+                <Image Source="otoño.jpg" />
+            </ScrollViewer>
+        </UniformGrid>
+    </DockPanel>
 </Window>
